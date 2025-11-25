@@ -54,6 +54,8 @@ export function MapView({ stations }: MapViewProps) {
       const coords: [number, number] = [station.lat, station.lng]
       const price =
         Object.values(station.fuels ?? {}).find((fuel) => !!fuel)?.price ?? '—'
+      const fuelSticker = Object.keys(station.fuels ?? {})
+      const fuelsLabel = fuelSticker.length ? fuelSticker.join(', ').toUpperCase() : 'FUEL DATA TBD'
 
       const marker = L.marker(coords, {
         icon: L.divIcon({
@@ -67,9 +69,11 @@ export function MapView({ stations }: MapViewProps) {
         })
       })
 
-      marker.bindPopup(
-        `<strong>${station.name}</strong><br/>Province: ${station.province}<br/>E95 price: ${price}`
-      )
+      marker
+        .bindPopup(
+          `<strong>${station.name}</strong><br/>Province: ${station.province}<br/>Price sample: ${price}`
+        )
+        .bindTooltip(fuelsLabel, { sticky: true })
 
       pinsLayerRef.current?.addLayer(marker)
     })
