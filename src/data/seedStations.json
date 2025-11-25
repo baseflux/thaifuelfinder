@@ -1,0 +1,26 @@
+[
+  {
+    "id": "S001",
+    "name": "PTT Coastal Chonburi",
+    "brand": "PTT",
+    "province": "Chonburi",
+    "district": "Sriracha",
+    "lat": 13.152,
+    "lng": 100.93,
+    "flags": 0,
+    "fuels": {
+      "gasohol95": { "price": 42.3, "lastUpdated": 1732506000 },
+      "e20": { "price": 39.8, "lastUpdated": 1732506000 },
+      "e85": { "price": 36.5, "lastUpdated": 1732506000 },
+      "b7": { "price": 33.4, "lastUpdated": 1732506000 },
+      "premium": { "price": 45.2, "lastUpdated": 1732506000 }
+    },
+    "history": {
+      "e85": [
+        { "week": "2025-10-28", "avg": 36.7 },
+        { "week": "2025-11-04", "avg": 36.8 },
+        { "week": "2025-11-11", "avg": 36.5 }
+      ]
+    }
+  }
+]
